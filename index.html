@@ -1,4 +1,74 @@
-<html><body><h1>It works!</h1>
-<p>This is the default web page for this server.</p>
-<p>The web server software is running but no content has been added, yet.</p>
-</body></html>
+<!DOCTYPE html
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <script type="text/javascript" src="js/jquery.js" ></script>
+        <script type="text/javascript" src="js/bootstrap.js" ></script>
+        <script type="text/javascript" src="js/main.js" ></script>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Locator</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                             <li class="active">
+                                <a href="#">Despre Locator</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Preferences</a>
+                            </li>
+                               <li class="">
+                                <a href="#">Finalize</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div style="" id="init">
+                        <h2>Bine ai venit!</h2>
+                        <p>Vrem sa te ajutam cu mutarea in orasul nostru, asadar o sa te rugam sa completezi formularul care urmeaza</p>
+                    </div>
+                    <div style="display: none;" id="form">
+                            <fieldset>
+                                <legend>Locator settings</legend>
+                                <label class="radio">
+                                    <input type="radio" name="optOk" id="norules" value="ok" checked>
+                                    Pot fi asezat oriunde in oras.
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="optOk" id="wantrules" value="notok">
+                                    Imi doresc sa specific niste reguli.
+                                </label>
+                                <label class="control-group"> Reguli </label>
+                                <div style="display: none" id="rules">
+                                    <button id="addrule"> + </button>
+                                    <button id="rmrule"> - </button>
+                                    <button id="showhelp"> ? </button>
+                                    <div style="display: none" class="alert alert-info">
+                                        <span id="help-rules" class="help-block">
+                                            <strong>Informatii:</strong>
+                                            <p>Apasa pe plus pentru a adauga reguli.</p>
+                                            <p>Daca nu iti convine o regula, selecteaz-o si apasa pe minus</p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                    </div>
+                    <div style="visibility: hidden;" id="end">
+                        <p> Bine ai venit in orasul nostru, poti vedea pe harta cine sunt noii tai vecini.</p>
+                    </div>
+                    <button id="btnext"> Next </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
